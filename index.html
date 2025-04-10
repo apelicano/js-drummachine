@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drum Machine</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- 1. A div#drum-machine that contains all other elements -->
+  <div id="drum-machine">
+    <!-- 3. A p element with id "display" -->
+    <p id="display">Press a key or click a pad</p>
+
+    <!-- 2. A div with id "pad-bank" for drum pads -->
+    <div id="pad-bank">
+      <!-- 4. Nine clickable drum-pad elements in order with innerText Q, W, E, A, S, D, Z, X, C.  
+           Each drum-pad’s unique id describes the associated audio clip.
+           Each drum-pad also has a data-key attribute for easier key matching.
+           5. Each drum-pad contains an audio element with class "clip". Note that the audio id matches
+              the parent’s trigger character. -->
+      <div class="drum-pad" id="Heater-1" data-key="Q">
+        Q
+        <audio class="clip" id="Q" src="https://cdn.freecodecamp.org/curriculum/drum/Heater-1.mp3"></audio>
+      </div>
+      <div class="drum-pad" id="Heater-2" data-key="W">
+        W
+        <audio class="clip" id="W" src="https://cdn.freecodecamp.org/curriculum/drum/Heater-2.mp3"></audio>
+      </div>
+      <div class="drum-pad" id="Heater-3" data-key="E">
+        E
+        <audio class="clip" id="E" src="https://cdn.freecodecamp.org/curriculum/drum/Heater-3.mp3"></audio>
+      </div>
+      <div class="drum-pad" id="Heater-4" data-key="A">
+        A
+        <audio class="clip" id="A" src="https://cdn.freecodecamp.org/curriculum/drum/Heater-4_1.mp3"></audio>
+      </div>
+      <div class="drum-pad" id="Clap" data-key="S">
+        S
+        <audio class="clip" id="S" src="https://cdn.freecodecamp.org/curriculum/drum/Heater-6.mp3"></audio>
+      </div>
+      <div class="drum-pad" id="Open-HH" data-key="D">
+        D
+        <audio class="clip" id="D" src="https://cdn.freecodecamp.org/curriculum/drum/Dsc_Oh.mp3"></audio>
+      </div>
+      <div class="drum-pad" id="Kick-n'-Hat" data-key="Z">
+        Z
+        <audio class="clip" id="Z" src="https://cdn.freecodecamp.org/curriculum/drum/Kick_n_Hat.mp3"></audio>
+      </div>
+      <div class="drum-pad" id="Kick" data-key="X">
+        X
+        <audio class="clip" id="X" src="https://cdn.freecodecamp.org/curriculum/drum/RP4_KICK_1.mp3"></audio>
+      </div>
+      <div class="drum-pad" id="Closed-HH" data-key="C">
+        C
+        <audio class="clip" id="C" src="https://cdn.freecodecamp.org/curriculum/drum/Cev_H2.mp3"></audio>
+      </div>
+    </div>
+
+    <!-- Extra Controls (for power, bank, and volume) -->
+    <div class="controls">
+      <div class="toggle-container">
+        <label for="power-toggle">Power</label>
+        <input type="checkbox" id="power-toggle" checked>
+      </div>
+      <div class="toggle-container">
+        <label for="bank-toggle">Bank</label>
+        <input type="checkbox" id="bank-toggle" />
+      </div>
+      <div class="slider-container">
+        <label for="volume">Volume</label>
+        <input type="range" id="volume" min="0" max="100" value="50" />
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

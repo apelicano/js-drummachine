@@ -1,0 +1,15 @@
+// running tests
+1. You should have a div element with an id of drum-machine that contains all other elements.
+2. Inside the #drum-machine element you should have another div with an id of pad-bank.
+3. Inside the #drum-machine element you should have a p element with an id of display.
+4. Inside your #pad-bank element you should have nine clickable drum pad elements each with a class of drum-pad.
+5. Each .drum-pad should have one of the following letters as innerText, in order: Q, W, E, A, S, D, Z, X, C.
+6. Each .drum-pad should have an audio element which has a class of clip, a src attribute that points to an audio clip, and an id corresponding to the inner text of its parent .drum-pad element (e.g. id="Q", id="W", id="E" etc.).
+7. When you click on a .drum-pad element, the audio clip contained in its child audio element should be triggered.
+8. When you press one of the keys Q, W, E, A, S, D, Z, X, C on your keyboard, the corresponding audio element should play the corresponding sound.
+9. When a .drum-pad is triggered, you should display a string describing the associated audio clip as the inner text of the #display element (each string must be unique).
+// tests completed
+// console output
+[TypeError: Cannot read properties of undefined (reading 'innerText')]
+[TypeError: Cannot read properties of undefined (reading 'id')]
+[TypeError: Cannot read properties of undefined (reading 'paused')]

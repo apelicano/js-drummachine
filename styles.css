@@ -1,0 +1,117 @@
+/* General Styling */
+body {
+    background-color: #2c2c2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Drum Machine Container */
+  #drum-machine {
+    background-color: #3b3b3b;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Display Section */
+  #display {
+    background-color: #1e1e1e;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    padding: 12px;
+    width: 90%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  /* Pad Bank (3x3 Drum Pad Grid) */
+  #pad-bank {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    justify-items: center;
+  }
+  
+  /* Drum Pads */
+  .drum-pad {
+    background-color: #4c4c4c;
+    color: white;
+    border: none;
+    padding: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+  }
+  
+  .drum-pad:hover {
+    background-color: #5c5c5c;
+    transform: scale(1.05);
+  }
+  
+  /* Active Drum Pad Effect 
+     - :active applies when the mouse is pressed.
+     - .active (added via JavaScript) applies for keyboard events.
+  */
+  .drum-pad:active,
+  .drum-pad.active {
+    background-color: #ff9800;
+    box-shadow: 0px 0px 12px rgba(255, 152, 0, 0.6);
+    transform: scale(1.05);
+  }
+  
+  /* Toggle and Controls */
+  .controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  /* Volume Slider */
+  .slider-container {
+    width: 90%;
+    margin-top: 12px;
+  }
+  
+  input[type="range"] {
+    width: 100%;
+    background-color: #4c4c4c;
+    height: 6px;
+    border-radius: 6px;
+    outline: none;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb,
+  input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background-color: #ff9800;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+  input[type="range"]:hover::-webkit-slider-thumb {
+    transform: scale(1.2);
+  }
+  
